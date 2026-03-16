@@ -1,4 +1,5 @@
 // import useState from react
+import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -6,6 +7,7 @@ import './App.css'
 
 function App() {
   // create your count variables
+  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -24,17 +26,37 @@ function App() {
         <button
           className="counter"
           // on click increase count by 1
+          onClick={() => setCount(count + 1)}
         >
-          Display Live Count Here: 
+          Display Live Count Here: {count}
         </button>
 
         {/* On your own, create a second button that decreases the count  */}
-
+        <button
+          className="counter"
+          // on click increase count by 1
+          onClick={() => setCount(count - 1)}
+        >
+          Display Live Count Here: {count}
+        </button>
 
         {/* On your own, create a third button that multiples the count by negative 1  */}
-
+        <button
+          className="counter"
+          // on click increase count by 1
+          onClick={() => setCount(count * -1)}
+        >
+          Display Live Count Here: {count}
+        </button>
 
         {/* On your own, create a fourth button that multiples the count by positive 10  */}
+        <button
+          className="counter"
+          // on click increase count by 1
+          onClick={() => setCount(count * 10)}
+        >
+          Display Live Count Here: {count}
+        </button>
       </section>
 
       <div className="ticks"></div>
